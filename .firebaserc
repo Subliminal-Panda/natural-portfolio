@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nature-portfolio-3b346": {
+      "hosting": {
+        "nature-portfolio": [
+          "nature-portfolio-3b346"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nature-portfolio-3b346"
+  }
+}

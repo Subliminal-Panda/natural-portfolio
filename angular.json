@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "nature-portfolio:build:production",
+            "firebaseProject": "nature-portfolio-3b346",
+            "firebaseHostingSite": "nature-portfolio-3b346"
+          }
         }
       }
     }
