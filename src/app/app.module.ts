@@ -19,7 +19,6 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-import { PublicationComponent } from './components/publication/publication.component';
 import { AddPublicationComponent } from './components/add-publication/add-publication.component';
 import { PublicationsListComponent } from './components/publications-list/publications-list.component';
 
@@ -31,7 +30,6 @@ import { PublicationsListComponent } from './components/publications-list/public
     BodyComponent,
     NavbarComponent,
     LogoComponent,
-    PublicationComponent,
     AddPublicationComponent,
     PublicationsListComponent
   ],
