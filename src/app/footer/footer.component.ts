@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  templateUrl: './forest.svg',
+  templateUrl: './SVG/forest.svg',
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
