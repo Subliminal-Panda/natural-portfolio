@@ -21,6 +21,12 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AddPublicationComponent } from './components/add-publication/add-publication.component';
 import { PublicationsListComponent } from './components/publications-list/publications-list.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
+import { EventsListComponent } from './components/events-list/events-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CommissionsComponent } from './components/commissions/commissions.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,13 @@ import { PublicationsListComponent } from './components/publications-list/public
     NavbarComponent,
     LogoComponent,
     AddPublicationComponent,
-    PublicationsListComponent
+    PublicationsListComponent,
+    EventDetailsComponent,
+    EventsListComponent,
+    AboutComponent,
+    ContactComponent,
+    CommissionsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
