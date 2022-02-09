@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'nature-portfolio';
+  page = 'publications'
+  currentRoute: any = 'publications'
+  constructor(private route: ActivatedRoute) {
+    this.currentRoute = this.route.routeConfig
+    const url: string = this.route.snapshot.url.join('');
+    console.log('route config:', url)
+  }
 }

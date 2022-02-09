@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Publication } from 'src/app/models/publication.model';
+import { PublicationService } from 'src/app/services/publication.service';
 
 @Component({
   selector: 'app-add-publication',

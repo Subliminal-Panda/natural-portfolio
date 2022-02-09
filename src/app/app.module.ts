@@ -27,6 +27,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CommissionsComponent } from './components/commissions/commissions.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddEventComponent } from './components/add-event/add-event.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LoginComponent } from './components/login/login.component';
     AboutComponent,
     ContactComponent,
     CommissionsComponent,
-    LoginComponent
+    LoginComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,
