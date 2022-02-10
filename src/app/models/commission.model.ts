@@ -3,4 +3,5 @@ export class Commission {
     title?: string;
     description?: string;
     image?: string;
+    published?: boolean;
 }
