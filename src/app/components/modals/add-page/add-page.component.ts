@@ -1,6 +1,7 @@
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Page } from 'src/app/models/page.model';
+import { PageService } from 'src/app/services/page.service';
 
 @Component({
   selector: 'app-add-page',
@@ -9,23 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPageComponent implements OnInit {
 
-  title: string
-
-  constructor(
-
-    public activeModal: NgbActiveModal
-  ) {
-    this.title = ''
-   }
+  page: Page = { id: undefined, title: '', order: undefined }
+  constructor(private service: PageService) {
+  }
 
   ngOnInit(): void {
-    this.title = ''
   }
 
   onSubmit(form: NgForm) {
-    console.log('form data:', form.form.value.title)
-    this.activeModal.close();
-    return form.form.value.title;
+    this.service.addpage(form.value).then(() => form.reset());
   }
 
 }

@@ -1,4 +1,4 @@
 <div class="navbar">
-    <h1 *ngFor="let page of pages"><a [routerLink]="'/' + page" routerLinkActive="active">{{page.substring(0, 1).toUpperCase() + page.substring(1)}}</a></h1>
+    <h1 *ngFor="let page of pages"><a [routerLink]="'/' + page.title" routerLinkActive="active">{{page.title.substring(0, 1).toUpperCase() + page.title.substring(1)}}</a></h1>
 </div>
 <p (click)="addPageModal()">Add Page</p>

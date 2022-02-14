@@ -1,6 +1,8 @@
+import { PageService } from './../../services/page.service';
 import { Component, OnInit } from '@angular/core';
 import { AddPageComponent } from '../modals/add-page/add-page.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Page } from 'src/app/models/page.model';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +11,26 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavbarComponent implements OnInit {
 
-  pages: Array<string>
-  constructor(private modal: NgbModal) {
-    this.pages = ['publications', 'commissions', 'events', 'about', 'contact'];
+  pages: Page[] = [
+    {id: 'publications', title: 'publications', order: 0},
+    {id: 'commissions', title: 'commissions', order: 1},
+    {id: 'events', title: 'events', order: 2},
+    {id: 'about', title: 'about', order: 3},
+    {id: 'contact', title: 'contact', order: 4}];
 
+  constructor(private modal: NgbModal, private service: PageService) {
+    this.pages = [
+      {id: 'publications', title: 'publications', order: 0},
+      {id: 'commissions', title: 'commissions', order: 1},
+      {id: 'events', title: 'events', order: 2},
+      {id: 'about', title: 'about', order: 3},
+      {id: 'contact', title: 'contact', order: 4}];
    }
 
   ngOnInit(): void {
+    // this.service.getpages().subscribe((res: Page[]) => {
+      // this.pages.concat(res)
+    // })
   }
 
   addPageModal() {
@@ -24,9 +39,6 @@ export class NavbarComponent implements OnInit {
       centered: true,
       windowClass: 'dark-modal',
     });
-    modalRef.result.then((result) => {
-      console.log('result:', result)
-    })
   }
 
 }
