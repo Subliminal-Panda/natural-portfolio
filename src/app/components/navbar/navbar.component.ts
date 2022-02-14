@@ -28,9 +28,9 @@ export class NavbarComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    // this.service.getpages().subscribe((res: Page[]) => {
-      // this.pages.concat(res)
-    // })
+    this.service.getpages().subscribe((res: Page[]) => {
+      this.pages = this.pages.concat(res)
+    })
   }
 
   addPageModal() {
