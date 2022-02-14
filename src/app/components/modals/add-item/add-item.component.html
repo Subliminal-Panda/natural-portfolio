@@ -1,0 +1,64 @@
+<div>
+    <h4>Add new item</h4>
+    <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+
+        <div class="form-group">
+            <label>Category</label>
+            <select class="form-control" name="category" #name=ngModel [(ngModel)]="item.category">
+                <option value="publications">publications</option>
+                <option value="commissions">commissions</option>
+                <option value="events">events</option>
+                <option value="about">about</option>
+                <option value="contact">contact</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" name="title" #name="ngModel" [(ngModel)]="item.title" placeholder="Item Title" required>
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <input class="form-control" name="description" #name="ngModel" [(ngModel)]="item.description" placeholder="Item Description" required>
+        </div>
+
+        <div class="form-group">
+            <label>Image</label>
+            <input class="form-control" name="image" #name="ngModel" [(ngModel)]="item.image" placeholder="Item Image">
+        </div>
+
+        <div class="form-group">
+            <label>Icon</label>
+            <input class="form-control" name="icon" #name="ngModel" [(ngModel)]="item.icon" placeholder="Item Icon">
+        </div>
+
+        <div class="form-group">
+            <label>Link</label>
+            <input class="form-control" name="link" #name="ngModel" [(ngModel)]="item.link" placeholder="Item Link">
+        </div>
+
+        <div class="form-group">
+            <label>Link Name</label>
+            <input class="form-control" name="linkname" #name="ngModel" [(ngModel)]="item.linkname" placeholder="Item Link Name">
+        </div>
+
+        <div class="form-group">
+            <label>Sort Order</label>
+            <input class="form-control" name="order" #name="ngModel" [(ngModel)]="item.order" placeholder="Item Order">
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <select class="form-control" name="status" #name="ngModel" [(ngModel)]="item.published" placeholder="Published Status">
+                <option value=true>Published</option>
+                <option value=false>Draft</option>
+            </select>
+        </div>
+
+        <div class="form-group float-right">
+            <button type="submit" class="btn btn-success"
+            [disabled]="!itemForm.valid" [disabled]="itemForm.invalid">Add List Item</button>
+        </div>
+    </form>
+</div>

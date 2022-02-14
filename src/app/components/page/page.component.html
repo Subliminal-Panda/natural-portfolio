@@ -1,0 +1,10 @@
+
+<div [className]="page + '-wrap wrap'">
+    <app-header></app-header>
+    <p (click)="addModal()">Add List Item</p>
+    <div ngFor="let item of items">
+        <app-item *ngFor="let item of items"
+        [item]="item">
+        </app-item>
+    </div>
+</div>

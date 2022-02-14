@@ -18,32 +18,27 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AddPublicationComponent } from './components/modals/add-publication/add-publication.component';
-import { PublicationsListComponent } from './components/publications-list/publications-list.component';
-import { EventDetailsComponent } from './components/event-details/event-details.component';
-import { EventsListComponent } from './components/events-list/events-list.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { CommissionsComponent } from './components/commissions/commissions.component';
 import { LoginComponent } from './components/login/login.component';
-import { AddEventComponent } from './components/modals/add-event/add-event.component';
-import { AddCommissionComponent } from './components/modals/add-commission/add-commission.component';
+import { PageComponent } from './components/page/page.component';
+import { AddItemComponent } from './components/modals/add-item/add-item.component';
+import { EditItemComponent } from './components/modals/edit-item/edit-item.component';
+import { DeleteItemComponent } from './components/modals/delete-item/delete-item.component';
+import { ItemComponent } from './components/item/item.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddPageComponent } from './components/modals/add-page/add-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    AddPublicationComponent,
-    PublicationsListComponent,
-    EventDetailsComponent,
-    EventsListComponent,
-    AboutComponent,
-    ContactComponent,
-    CommissionsComponent,
     LoginComponent,
-    AddEventComponent,
-    AddCommissionComponent
+    PageComponent,
+    AddItemComponent,
+    EditItemComponent,
+    DeleteItemComponent,
+    ItemComponent,
+    AddPageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,11 +53,13 @@ import { AddCommissionComponent } from './components/modals/add-commission/add-c
     provideMessaging(() => getMessaging()),
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    NgbModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ EditItemComponent ]
 })
 export class AppModule { }

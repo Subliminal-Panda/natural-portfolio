@@ -1,0 +1,16 @@
+<div>
+    <h4>Add new page</h4>
+    <form #pageForm="ngForm" (ngSubmit)="onSubmit(pageForm)">
+
+        <div class="form-group">
+            <label>New Page Title</label>
+            <input class="form-control" name="title" #name="ngModel" [(ngModel)]="title" placeholder="Item Title" required>
+        </div>
+
+
+        <div class="form-group float-right">
+            <button type="submit" class="btn btn-success"
+            [disabled]="!pageForm.valid" [disabled]="pageForm.invalid">Add List Item</button>
+        </div>
+    </form>
+</div>

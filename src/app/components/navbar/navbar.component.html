@@ -1,7 +1,4 @@
 <div class="navbar">
-    <h1><a routerLink="/publications" routerLinkActive="active">Publications</a></h1>
-    <h1><a routerLink="/commissions" routerLinkActive="active">Commissions</a></h1>
-    <h1><a routerLink="/events" routerLinkActive="active">Events</a></h1>
-    <h1><a routerLink="/about" routerLinkActive="active">About</a></h1>
-    <h1><a routerLink="/contact" routerLinkActive="active">Contact</a></h1>
+    <h1 *ngFor="let page of pages"><a [routerLink]="'/' + page" routerLinkActive="active">{{page.substring(0, 1).toUpperCase() + page.substring(1)}}</a></h1>
 </div>
+<p (click)="addPageModal()">Add Page</p>

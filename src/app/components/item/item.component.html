@@ -1,0 +1,9 @@
+<div *ngIf="item" class="content">
+    <h1>{{item.title}}</h1>
+    <p>{{item.description}}</p>
+    <p>{{item.image}}</p>
+    <p>{{item.icon}}</p>
+    <a href="{{'//' + item.link}}">{{item.linkname}}</a>
+    <i class="bi bi-pencil-square" style="color: green;" (click)="editModal()"></i>
+    <i class="bi bi-trash" (click)="deleteItem(item)" style="color:red;"></i>
+</div>
